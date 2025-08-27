@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  @them{
+    /* text size */
+    --text-h5: 20px;
+  }
+}
+
+html , body{
+  overflow-x: hidden;
+}
+
+*{
+  font-family: var(--ibm-plex-arabic) , sans-serif;
+}
+.custom-container{
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+
+
+.btn-1{
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+
+@media (max-width: 800px){
+  .custom-container{
+    padding-inline: 1.5rem;
+  }
+}
