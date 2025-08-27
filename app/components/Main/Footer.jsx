@@ -1,49 +1,82 @@
-import React from 'react'
+"use client";
+import React from "react";
 
 const Footer = () => {
-    return (
-        <div className='w-full py-12 bg-black'>
-            <div className="custom-container">
-                {/* contwent */}
-                <div className='flex flex-col items-center'>
-                    {/* logo */}
-                    <img src="/Logo/Logo-White.png" alt="" />
-                    <div className='flex gap-16 flex-col items-center md:flex-row my-12'>
-                        <div className='flex gap-12'>
-                            <ul>
-                                <li><h3 className='text-white text-2xl font-medium md:text-[30px]'>روابط مفيدة</h3></li>
-                                <li className='text-white text-[16px]'>الرئسية</li>
-                                <li className='text-white text-[16px]'>اعثر على عقار</li>
-                                <li className='text-white text-[16px]'>من نحن</li>
-                                <li className='text-white text-[16px]'>أتصل الأن</li>
-                            </ul>
+  return (
+    <footer className="w-full bg-black text-white py-16">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col items-center gap-16">
 
-                            <ul>
-                                <li><h3 className='text-white text-2xl font-medium md:text-[30px]'> روابط قانونية </h3></li>
-                                <li className='text-white text-[16px]'>الشروط والاحكام</li>
-                                <li className='text-white text-[16px]'> السياسات </li>
-                                <li className='text-white text-[16px]'> محمامي</li>
-                                <li className='text-white text-[16px]'> حجز مستشار</li>
-                            </ul>
-                        </div>
-                        <div>
-                            {/* subscipre */}
-                            <h3 className='text-white text-2xl font-medium md:text-[30px]'>جريدتنا الاللكترونية</h3>
-                            <p className='text-gray-600 text-[16px] my-3'>أحصل علي اخر الاخبار وانت في بلدك</p>
-                            <div className='flex py-2.5 px-3 bg-white rounded-2xl gap-3 '>
-                                <input type="email" name="" id="" className='bg-none text-black placeholder:text-gray-600'  placeholder='أدخل الايميل'/>
-                                <button className='py-[10px] px-[15px] rounded-full bg-black text-white text-[12px]'>اشترك</button>
-                            </div>
-                        </div>
-                    </div>
+        {/* Logo */}
+        <img
+          src="/Logo/Logo-White.png"
+          alt="Noviland Logo"
+          className="w-32 md:w-40 animate-fadeInUp"
+        />
 
-                    {/* hr */}
-                    <hr className=' bg-white h-[3px] rounded-full w-full mb-2'/>
-                    <p className=' text-white text-[16px] text-center'> نوفيلاند للعقارات - جميع الحقوق محفوظة 2023</p>
-                </div>
+        {/* Links and Subscribe */}
+        <div className="flex flex-col md:flex-row justify-between w-full gap-12 animate-fadeInUp">
+          
+          {/* Links */}
+          <div className="flex flex-col sm:flex-row gap-12">
+            {/* Useful Links */}
+            <ul className="flex flex-col gap-3">
+              <li className="text-2xl font-semibold mb-2">روابط مفيدة</li>
+              <li className="text-base hover:text-blue-400 cursor-pointer transition">الرئيسية</li>
+              <li className="text-base hover:text-blue-400 cursor-pointer transition">اعثر على عقار</li>
+              <li className="text-base hover:text-blue-400 cursor-pointer transition">من نحن</li>
+              <li className="text-base hover:text-blue-400 cursor-pointer transition">اتصل الآن</li>
+            </ul>
+
+            {/* Legal Links */}
+            <ul className="flex flex-col gap-3">
+              <li className="text-2xl font-semibold mb-2">روابط قانونية</li>
+              <li className="text-base hover:text-blue-400 cursor-pointer transition">الشروط والأحكام</li>
+              <li className="text-base hover:text-blue-400 cursor-pointer transition">السياسات</li>
+              <li className="text-base hover:text-blue-400 cursor-pointer transition">محامامي</li>
+              <li className="text-base hover:text-blue-400 cursor-pointer transition">حجز مستشار</li>
+            </ul>
+          </div>
+
+          {/* Subscribe */}
+          <div className="flex flex-col gap-4">
+            <h3 className="text-2xl font-semibold">جريدتنا الإلكترونية</h3>
+            <p className="text-gray-300 text-base">
+              أحصل على آخر الأخبار وأنت في بلدك
+            </p>
+            <div className="flex w-full max-w-md gap-3 bg-white rounded-2xl p-1">
+              <input
+                type="email"
+                placeholder="أدخل الإيميل"
+                className="flex-1 px-3 py-2 text-black placeholder-gray-500 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+              />
+              <button className="px-6 py-2 rounded-2xl bg-black text-white font-semibold hover:opacity-90 transition">
+                اشترك
+              </button>
             </div>
+          </div>
         </div>
-    )
-}
 
-export default Footer
+        {/* Divider */}
+        <hr className="border-t-2 border-white w-full rounded-full animate-fadeInUp" />
+
+        {/* Copy */}
+        <p className="text-center text-base animate-fadeInUp">
+          نوفيلاند للعقارات - جميع الحقوق محفوظة 2023
+        </p>
+      </div>
+
+      {/* Tailwind Animation */}
+      <style jsx>{`
+        @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeInUp {
+          animation: fadeInUp 0.6s ease-out forwards;
+        }
+      `}</style>
+    </footer>
+  );
+};
+
+export default Footer;

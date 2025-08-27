@@ -14,8 +14,8 @@ import MobileNav from "./MobileNav";
 const NavLink = [
   { id: 1, url: "/", text: "الرئسية" },
   { id: 2, url: "/buildings", text: "عقارات" },
-  { id: 3, url: "/about", text: "من نحن" },
-  { id: 4, url: "/contact", text: "تواصل" },
+  { id: 3, url: "/#about", text: "من نحن" },
+  { id: 4, url: "/#contact", text: "تواصل" },
 ];
 
 

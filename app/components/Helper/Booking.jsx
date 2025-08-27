@@ -4,7 +4,7 @@ import { GoArrowUpLeft } from "react-icons/go";
 const Booking = () => {
     return (
         <div>
-            <div className="custom-container py-[4rem]">
+            <div className="custom-container py-[4rem]" id='contact'>
                 {/* title */}
                 <div className=' flex items-center gap-[4rem]'>
                     <h1 className='text-[20px] md:text-3xl lg:text-4xl font-semibold text-black mb-2'>أحجز الأن</h1>

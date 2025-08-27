@@ -1,7 +1,7 @@
 import {  IBM_Plex_Sans_Arabic } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Main/Navbar";
-import Foote from "./components/Main/Footer";
+import Footer from "./components/Main/Footer"
 
 
 // FONT Arabic
@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         {children}
-        <Foote />
+        <Footer />
       </body>
     </html>
   );

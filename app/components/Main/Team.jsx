@@ -4,7 +4,7 @@ import { HiOutlineArrowSmLeft } from "react-icons/hi";
 const Team = () => {
     return (
         <div>
-            <div className="custom-container">
+            <div className="custom-container" id='about'>
                 {/* title */}
                 <div className='flex justify-between flex-wrap gap-y-4 mb-16'>
                     {/* text */}
